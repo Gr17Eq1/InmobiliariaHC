@@ -15,6 +15,10 @@ export class Codeudor extends Entity {
   })
   cartalaboral: string;
 
+  @property({
+    type: 'string',
+  })
+  alquilerId?: string;
 
   constructor(data?: Partial<Codeudor>) {
     super(data);
