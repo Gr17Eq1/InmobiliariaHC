@@ -21,6 +21,10 @@ export class Venta extends Entity {
   })
   timestamp: string;
 
+  @property({
+    type: 'string',
+  })
+  solicitudId?: string;
 
   constructor(data?: Partial<Venta>) {
     super(data);

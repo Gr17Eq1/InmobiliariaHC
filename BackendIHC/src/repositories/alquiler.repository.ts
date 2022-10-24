@@ -1,16 +1,22 @@
-import {inject} from '@loopback/core';
-import {DefaultCrudRepository} from '@loopback/repository';
+import {inject, Getter} from '@loopback/core';
+import {DefaultCrudRepository, repository, HasManyRepositoryFactory} from '@loopback/repository';
 import {MongodbDataSource} from '../datasources';
-import {Alquiler, AlquilerRelations} from '../models';
+import {Alquiler, AlquilerRelations, Codeudor} from '../models';
+import {CodeudorRepository} from './codeudor.repository';
 
 export class AlquilerRepository extends DefaultCrudRepository<
   Alquiler,
   typeof Alquiler.prototype.id,
   AlquilerRelations
 > {
+
+  public readonly codeudores: HasManyRepositoryFactory<Codeudor, typeof Alquiler.prototype.id>;
+
   constructor(
-    @inject('datasources.mongodb') dataSource: MongodbDataSource,
+    @inject('datasources.mongodb') dataSource: MongodbDataSource, @repository.getter('CodeudorRepository') protected codeudorRepositoryGetter: Getter<CodeudorRepository>,
   ) {
     super(Alquiler, dataSource);
+    this.codeudores = this.createHasManyRepositoryFactoryFor('codeudores', codeudorRepositoryGetter,);
+    this.registerInclusionResolver('codeudores', this.codeudores.inclusionResolver);
   }
 }
