@@ -9,3 +9,7 @@ Queriendo sistematizar el proceso de administración de los inmuebles, el gerent
 En [BackendIHC](https://github.com/Gr17Eq1/InmobiliariaHC/tree/main/BackendIHC) se encuentra, como su nombre lo indica, el backend del proyecto, generado a través de [Loopback](https://loopback.io/)
 
 En FrontendIHC (próximamente) se encontrará la interfaz gráfica de la aplicación, generado a través de [AngularJS](https://angular.io/)
+
+## Mockup
+
+Se puede encontrar [aquí](https://imgur.com/a/iIyoJdW)
