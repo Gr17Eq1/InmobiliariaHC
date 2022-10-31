@@ -1,75 +1,70 @@
 # inmobiliariahc
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+Esta aplicación se genera utilizando [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) con el
+[diseño inicial del proyecto](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
 
-## Install dependencies
+## Instalar dependencias
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+Por defecto, las dependencias fueron instaladas cuando se generó esta aplicación.
+Siempre que las dependencias en `package.json` sean cambiadas, hay que ejecutar el siguiente comando:
 
-```sh
+```
 npm install
 ```
 
-To only install resolved dependencies in `package-lock.json`:
+Para instalar sólo las dependencias resueltas en `package-lock.json`:
 
-```sh
+```
 npm ci
 ```
 
-## Run the application
+## Ejecutar la aplicación
 
-```sh
+```
 npm start
 ```
 
-You can also run `node .` to skip the build step.
+También se puede ejecutar con ``node .`` para saltarte el paso de construcción.
 
-Open http://127.0.0.1:3000 in your browser.
+Se abre http://127.0.0.1:3000 en el navegador.
 
-## Rebuild the project
+## Reconstruir el proyecto
 
-To incrementally build the project:
+Para construir el proyecto de forma incremental:
 
-```sh
+```
 npm run build
 ```
 
-To force a full build by cleaning up cached artifacts:
+Para forzar una construcción completa limpiando los artefactos en caché:
 
-```sh
+```
 npm run rebuild
 ```
 
-## Fix code style and formatting issues
+## Corregir problemas de estilo y formato del código
 
-```sh
+```
 npm run lint
 ```
 
-To automatically fix such issues:
+Para arreglar automáticamente estos problemas:
 
-```sh
+```
 npm run lint:fix
 ```
 
-## Other useful commands
+## Otros comandos útiles
 
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
+- `npm run migrate`: Migrar los esquemas de la base de datos para los modelos
+- `npm run openapi-spec`: Genera la especificación OpenAPI en un archivo
+- `npm run docker:build`: Construye una imagen Docker para esta aplicación
+- `npm run docker:run`: Ejecuta esta aplicación dentro de un contenedor Docker
 
-## Tests
+## Pruebas
 
 ```sh
 npm test
 ```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
 
 [![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
