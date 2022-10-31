@@ -1,8 +1,9 @@
-# InmobiliariaHC
-### Repositorio para almacenar el código de la aplicación en sus diferentes versiones
-### Para registrar las tareas que los miembros del equipo debemos realizar
 # InmobiliariaHC 🏠
 
+## Instalación
+Dentro de cada "subcarpeta" existen las instrucciones para la instalación de dependencias después de clonar el proyecto.
+
+## Descripción
 La inmobiliaria "Hogar Colombia" es una empresa que quiere incursionar en el mercado colombiano de la venta y alquiler de inmuebles. Sin embargo, se ha identificado tras un estudio de mercado que los colombianos consultan a través de internet los inmuebles una y otra vez antes de tomar una decisión tan importante como es el alquiler o la compra de un inmueble.
 
 Queriendo sistematizar el proceso de administración de los inmuebles, el gerente de Hogar Colombia ha contactado a la Universidad de Caldas para desarrollar el sistema que permita realizar toda esta gestión. Por tal motivo, la Universidad mediante el apoyo de los estudiantes del módulo de Programación Web de Misión TIC 2022 busca satisfacer esta necesidad de Hogar Colombia.
