@@ -1,18 +1,18 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
+from dotenv import load_dotenv
+# using SendGrid's Python Library
+# https://github.com/sendgrid/sendgrid-python
 import os
-from dotenv import load_dotenv, find_dotenv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-load_dotenv(find_dotenv())
+load_dotenv()
 
 app = Flask(__name__)
 
 
-@app.route("/email")
-def email():
-    # using SendGrid's Python Library
-    # https://github.com/sendgrid/sendgrid-python
+@app.route("/send-email")
+def send_email():
 
     """
     Atributos del email
@@ -24,22 +24,21 @@ def email():
         html_content (str): Contenido del email
     """
     message = Mail(
-        from_email=request.args.get("from"),
+        from_email=os.environ.get("MAIL_DEFAULT_SENDER"),
         to_emails=request.args.get("to"),
         subject=request.args.get("subject"),
         html_content=request.args.get("body"),
     )
-
     try:
         sg = SendGridAPIClient(os.environ.get("SENDGRID_API_KEY"))
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
         print(response.headers)
-        return "Email sent"
+        return "Correo electrónico enviado"
     except Exception as e:
         print(e.message)
-        return "Email not sent"
+        return "Correo electrónico no enviado"
 
 
 if __name__ == "__main__":
