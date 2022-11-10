@@ -12,5 +12,5 @@ pip install -r requirements.txt
 ## Ejecución
 
 ```
-python server.py
+flask run
 ```
