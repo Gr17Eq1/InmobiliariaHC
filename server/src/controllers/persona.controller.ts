@@ -17,13 +17,14 @@ import {
   requestBody,
   response,
 } from '@loopback/rest';
-import {Persona} from '../models';
+import {Persona, References} from '../models';
 import {PersonaRepository} from '../repositories';
+import {AuthService} from '../services';
 
 export class PersonaController {
   constructor(
     @repository(PersonaRepository)
-    public personaRepository : PersonaRepository,
+    public personaRepository: PersonaRepository,
   ) {}
 
   @post('/personas')
@@ -52,9 +53,7 @@ export class PersonaController {
     description: 'Persona model count',
     content: {'application/json': {schema: CountSchema}},
   })
-  async count(
-    @param.where(Persona) where?: Where<Persona>,
-  ): Promise<Count> {
+  async count(@param.where(Persona) where?: Where<Persona>): Promise<Count> {
     return this.personaRepository.count(where);
   }
 
@@ -106,7 +105,8 @@ export class PersonaController {
   })
   async findById(
     @param.path.string('id') id: string,
-    @param.filter(Persona, {exclude: 'where'}) filter?: FilterExcludingWhere<Persona>
+    @param.filter(Persona, {exclude: 'where'})
+    filter?: FilterExcludingWhere<Persona>,
   ): Promise<Persona> {
     return this.personaRepository.findById(id, filter);
   }
@@ -147,4 +147,24 @@ export class PersonaController {
   async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.personaRepository.deleteById(id);
   }
+
+  /**
+   * Identifica a una persona en el sistema
+   *
+   * @param data Un objeto con los datos de la persona
+   * @returns Una persona o null
+   */
+   @post('/personas/inicio-sesion')
+   @response(200, {
+     description: 'Persona model instance',
+   })
+   async identificar(@requestBody() data: References): Promise<Persona | null> {
+     let persona = await this.personaRepository.findOne({
+       where: {
+         email: data.usuario,
+         clave: data.clave,
+       },
+     });
+     return persona;
+   }
 }
