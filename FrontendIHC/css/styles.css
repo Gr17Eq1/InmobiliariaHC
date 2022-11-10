@@ -1,0 +1,214 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background: #96ACD9;
+}
+
+#contenedor{
+  width: 100%;
+  height: 1000px;
+  background: white;
+  margin: 0px auto;
+}
+/* Barra de menú*/
+/*
+#cabeza{
+  width: 100%;
+  height: 150px;
+  background: orange;
+  margin-left: 30px;
+}
+*/
+
+/* BARRA DE NAVEGACION HORIZONTAL */
+
+nav{
+  position: fixed;
+  background: #021F59;
+  float: left;
+}
+
+li infoNav{
+    background: #021F59;
+    float: left;
+    color: #96ACD9;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background: #021F59;
+  overflow: hidden;
+}
+
+li{
+  float:left;
+}
+
+li a{
+  display: block;
+  color:#96ACD9;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  background: #021F59;
+}
+
+.Navinfo{
+  float: left;
+}
+
+li a:hover{
+  background-color: #B0C4DE;
+  color: #A52A2A;
+}
+
+#navegacion {
+  width: 100%;
+  height: 50px;
+  background: green;
+}
+
+.imagen{
+  width: 100%;
+}
+
+.imagen img{
+  width: 100%;
+}
+
+.galeria{
+  width: 100%;
+  margin:auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 1rem;
+  float:left;
+}
+
+
+@media (min-width:100px){
+  .galeria{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width:520px){
+  .galeria{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:728px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width:1024px) {
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+#izq {
+  width: 450px;
+  height: 200px;
+  background: navy;
+  margin-left: 30px;
+  margin-top: 10px;
+  float: left;
+}
+
+#der {
+  width: 450px;
+  height: 200px;
+  background: yellow;
+  margin-top: 10px;
+  float: left;
+}
+
+#pie {
+  width: 100%;
+  height: 40px;
+  background: black;
+  margin-top: 0px;
+  float:left;
+  text-align: right;
+  text-align:top;
+  color:white;
+}
+
+#pie2 {
+  width: 100%;
+  height: 10px;
+  background: black;
+  margin-top: 0px;
+  float: left;
+  text-align: right;
+  text-align: top;
+  color: white;
+}
+
+body {
+  background-image: url('/Fotos/fondo.jpg');
+}
+
+.form-register {
+  width: 400px;
+  background: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
