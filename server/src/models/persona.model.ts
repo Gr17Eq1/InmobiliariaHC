@@ -39,6 +39,12 @@ export class Persona extends Entity {
 
   @property({
     type: 'string',
+    required: false,
+  })
+  clave?: string;
+
+  @property({
+    type: 'string',
     required: true,
   })
   timestamp: string;
